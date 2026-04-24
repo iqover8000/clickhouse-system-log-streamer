@@ -10,6 +10,12 @@ prints them to stdout, and stores a streaming offset in ClickHouse.
 - `Dockerfile` - Docker image build (uses `application/`)
 - `docker-compose.yaml` - local run configuration
 
+## CI/CD
+
+- Push to any branch: runs `yamllint` and `flake8`
+- Push a tag: builds and pushes a multi-arch image to GHCR
+  - platforms: `linux/amd64`, `linux/arm64`
+
 ## Run with Docker Compose
 
 1. Fill required variables in `.env`:

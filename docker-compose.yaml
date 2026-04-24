@@ -2,10 +2,10 @@
 
 services:
   clickhouse-logs-streamer:
-    build:
-      context: "."
-      dockerfile: "Dockerfile"
-    image: "ghcr.io/iqover8000/clickhouse-system-log-streamer"
+    # build:
+    #   context: "."
+    #   dockerfile: "Dockerfile"
+    image: "ghcr.io/iqover8000/clickhouse-system-log-streamer:0.1.0"
     container_name: "clickhouse-logs-streamer"
     restart: "unless-stopped"
     ports:
